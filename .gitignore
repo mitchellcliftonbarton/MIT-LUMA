@@ -1,0 +1,34 @@
+# OS
+.DS_Store
+
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+.output/
+.nuxt/
+.nitro/
+.cache/
+
+# Sanity
+studio/dist/
+
+# Env
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor
+.idea/
+*.swp
+
+# Backup of de-nested git histories (delete once no longer needed)
+.git-nested-backup/
