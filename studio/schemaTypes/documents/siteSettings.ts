@@ -1,5 +1,5 @@
 import {defineType, defineField} from 'sanity'
-import {CogIcon} from '@sanity/icons'
+import {CogIcon} from '@sanity/icons/Cog'
 
 /**
  * Global site settings. Edited as a singleton (one fixed document) — see
@@ -30,20 +30,6 @@ export default defineType({
       type: 'image',
       title: 'OG Image',
       description: 'An image used for Open Graph metadata. Can be overridden by per-page images.',
-    }),
-    defineField({
-      name: 'footerPrimaryLinks',
-      type: 'array',
-      title: 'Footer — Primary Links',
-      description: 'The primary list of links shown in the footer.',
-      of: [{type: 'navLink'}],
-    }),
-    defineField({
-      name: 'footerSecondaryLinks',
-      type: 'array',
-      title: 'Footer — Secondary Links',
-      description: 'The secondary list of links shown in the footer.',
-      of: [{type: 'navLink'}],
     }),
   ],
   preview: {

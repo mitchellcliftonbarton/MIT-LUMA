@@ -1,5 +1,5 @@
 import type {StructureResolver} from 'sanity/structure'
-import {CogIcon} from '@sanity/icons'
+import {CogIcon} from '@sanity/icons/Cog'
 
 // Singleton document types: edited as a single fixed document, not a list.
 export const singletonTypes = ['siteSettings']
