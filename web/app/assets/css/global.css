@@ -1,0 +1,28 @@
+@import 'tailwindcss';
+
+/*
+Tailwind theme — define brand tokens here (colors, fonts, spacing, …).
+These become Tailwind utilities automatically, e.g. --color-brand → bg-brand.
+Starter values only; replace with the real design system.
+*/
+
+@theme {
+  /* Colors */
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  /* Fonts */
+  --font-sans: ui-sans-serif, system-ui, sans-serif;
+}
+
+/*
+Global base styles
+*/
+
+* {
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: var(--font-sans);
+}
