@@ -1,28 +1,138 @@
 @import 'tailwindcss';
 
 /*
-Tailwind theme — define brand tokens here (colors, fonts, spacing, …).
-These become Tailwind utilities automatically, e.g. --color-brand → bg-brand.
-Starter values only; replace with the real design system.
+Fonts
+*/
+
+/* @font-face {
+  font-family: 'ABC Maxi Round';
+  src: url('/fonts/ABCMaxiRoundTrial-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+} */
+
+/* 
+Tailwind Config
 */
 
 @theme {
   /* Colors */
   --color-white: #ffffff;
   --color-black: #000000;
+  --color-plum: #3C1E3C;
+  --color-magenta: #FF66FF;
+  --color-blue: #0000FF;
+  --color-scarlet: #FF2800;
+  --color-lime: #00C800;
+  --color-teal: #003C4B;
+  --color-forest: #003C1E;
+  --color-mist: #97B8C0;
+  --color-sage: #B2CABD;
+  --color-mauve: #704A55;
+  --color-blush: #E1CCCC;
+  --color-sand: #CFB37A;
+
+  /* Font Sizes */
+  --text-3xs: 0.9rem;
+  --text-2xs: 1rem;
+  --text-xs: 1.4rem;
+  --text-sm: 1.6rem;
+  --text-base: 1.8rem;
+  --text-base-plus: 2.1rem;
+  --text-md: 2.4rem;
+  --text-md-plus: 2.5rem;
+  --text-lg: 3.6rem;
+  --text-xl: 4.8rem;
+  --text-2xl: 12rem;
 
   /* Fonts */
-  --font-sans: ui-sans-serif, system-ui, sans-serif;
+  --font-primary: 'Hue', serif;
+  --font-secondary: 'Pirelli', serif;
+  --font-tertiary: 'Inclusive Sans', sans-serif;
+
+  /* Spacing */
+  --spacing-xs: 0.8rem;
+  --spacing-sm: 1.2rem;
+  --spacing-base: 2rem;
+
+  --spacing-leading-sm: 0.9;
+  --spacing-leading-base: 1.1;
+  --spacing-leading-md: 1.2;
+  --spacing-leading-lg: 1.4;
+  --spacing-leading-xl: 1.68;
 }
 
 /*
-Global base styles
+Root Variables (non tailwind)
+*/
+
+:root {
+  --curve: cubic-bezier(0, 0.84, 0.24, 1);
+}
+
+/* 
+Global Styles 
 */
 
 * {
   -webkit-font-smoothing: antialiased;
 }
 
+html {
+  font-size: 10px;
+}
+
 body {
-  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  font-family: var(--font-primary);
+}
+
+main {
+  min-height: 100svh;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+  box-shadow: none;
+  border: none;
+}
+
+input {
+  outline: none;
+}
+
+figure {
+  margin: 0;
+}
+
+/*
+Utils
+*/
+
+@utility media-cover {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+@utility media-contain {
+  object-fit: contain;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+/*
+Lazy Loading
+*/
+
+img[loading='lazy'] {
+  opacity: 0;
+  transition: opacity 0.4s;
+
+  &.loaded {
+    opacity: 1;
+  }
 }
