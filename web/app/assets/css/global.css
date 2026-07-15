@@ -19,31 +19,42 @@ Tailwind Config
   /* Colors */
   --color-white: #ffffff;
   --color-black: #000000;
-  --color-plum: #3C1E3C;
-  --color-magenta: #FF66FF;
-  --color-blue: #0000FF;
-  --color-scarlet: #FF2800;
-  --color-lime: #00C800;
-  --color-teal: #003C4B;
-  --color-forest: #003C1E;
-  --color-mist: #97B8C0;
-  --color-sage: #B2CABD;
-  --color-mauve: #704A55;
-  --color-blush: #E1CCCC;
-  --color-sand: #CFB37A;
+  --color-plum: #3c1e3c;
+  --color-magenta: #ff66ff;
+  --color-blue: #0000ff;
+  --color-scarlet: #ff2800;
+  --color-lime: #00c800;
+  --color-teal: #003c4b;
+  --color-forest: #003c1e;
+  --color-mist: #97b8c0;
+  --color-sage: #b2cabd;
+  --color-mauve: #704a55;
+  --color-blush: #e1cccc;
+  --color-sand: #cfb37a;
 
   /* Font Sizes */
   --text-3xs: 0.9rem;
+  --text-3xs--line-height: 0.9;
   --text-2xs: 1rem;
+  --text-2xs--line-height: 1.68;
   --text-xs: 1.4rem;
+  --text-xs--line-height: 1.1;
   --text-sm: 1.6rem;
+  --text-sm--line-height: 1.4;
   --text-base: 1.8rem;
+  --text-base--line-height: 1.1;
   --text-base-plus: 2.1rem;
+  --text-base-plus--line-height: 1.1;
   --text-md: 2.4rem;
+  --text-md-line-height: 0.9;
   --text-md-plus: 2.5rem;
+  --text-md-plus--line-height: 0.9;
   --text-lg: 3.6rem;
+  --text-lg--line-height: 1.1;
   --text-xl: 4.8rem;
+  --text-xl--line-height: 1.1;
   --text-2xl: 12rem;
+  --text-2xl--line-height: 0.9;
 
   /* Fonts */
   --font-primary: 'Hue', serif;
@@ -51,9 +62,12 @@ Tailwind Config
   --font-tertiary: 'Inclusive Sans', sans-serif;
 
   /* Spacing */
-  --spacing-xs: 0.8rem;
-  --spacing-sm: 1.2rem;
+  --spacing-sm: 1rem;
   --spacing-base: 2rem;
+  --spacing-md: 3.5rem;
+  --spacing-lg: 4.8rem;
+
+  --spacing-nav-height: 13rem;
 
   --spacing-leading-sm: 0.9;
   --spacing-leading-base: 1.1;

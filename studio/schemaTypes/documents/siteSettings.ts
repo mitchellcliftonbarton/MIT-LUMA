@@ -1,4 +1,4 @@
-import {defineType, defineField} from 'sanity'
+import {defineType, defineField, defineArrayMember} from 'sanity'
 import {CogIcon} from '@sanity/icons/Cog'
 
 /**
@@ -31,6 +31,47 @@ export default defineType({
       title: 'OG Image',
       description: 'An image used for Open Graph metadata. Can be overridden by per-page images.',
     }),
+    defineField({
+      name: 'address',
+      type: 'array',
+      title: 'Address',
+      description: 'The physical address of the MIT LUMA Lab',
+      of: [
+        defineArrayMember({
+          type: 'block',
+          styles: [{title: 'Normal', value: 'normal'}],
+          lists: [],
+          marks: {
+            decorators: [
+              {title: 'Bold', value: 'strong'},
+              {title: 'Italic', value: 'em'},
+            ],
+            annotations: [],
+          },
+        }),
+      ],
+    }),
+    {
+      name: 'mainNavPrimaryLinks',
+      type: 'array',
+      title: 'Main Navigation — Primary Links',
+      description: 'The primary list of links shown in the main navigation.',
+      of: [{type: 'navLink'}],
+    },
+    {
+      name: 'footerPrimaryLinks',
+      type: 'array',
+      title: 'Footer — Primary Links',
+      description: 'The primary list of links shown in the footer.',
+      of: [{type: 'navLink'}],
+    },
+    {
+      name: 'footerSecondaryLinks',
+      type: 'array',
+      title: 'Footer — Secondary Links',
+      description: 'The secondary list of links shown in the footer.',
+      of: [{type: 'navLink'}],
+    },
   ],
   preview: {
     prepare: () => ({title: 'Site Settings'}),

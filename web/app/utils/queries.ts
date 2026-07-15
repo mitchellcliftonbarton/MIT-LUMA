@@ -12,6 +12,8 @@ export const siteSettingsQuery = groq`*[_type == "siteSettings"][0]{
   siteTitle,
   metaDescription,
   ogImage,
+  address,
+  mainNavPrimaryLinks[]{${navLinkProjection}},
   footerPrimaryLinks[]{${navLinkProjection}},
   footerSecondaryLinks[]{${navLinkProjection}}
 }`
