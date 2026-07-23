@@ -11,7 +11,7 @@
   </nav>
 </template>
 
-<script setup lang="ts">
+<script setup>
 const { data: settings } = await useSiteSettings()
 
 const links = computed(() => settings.value?.mainNavPrimaryLinks ?? [])

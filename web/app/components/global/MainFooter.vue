@@ -20,7 +20,7 @@
   </footer>
 </template>
 
-<script setup lang="ts">
+<script setup>
 const { data: settings } = await useSiteSettings()
 
 const address = computed(() => settings.value?.address ?? null)
